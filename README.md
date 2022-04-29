@@ -1,6 +1,6 @@
 # people_tracker
 
-For this demo project, I used ```yolov5m.onnx```, ```OpenCV```, and  ```Alex Bewley’s SORT algorithm(simple online and realtime tracking)``` and customized it as per the requirements.
+For this demo project, I used ```yolov5m.onnx```, ```OpenCV```, and customized ```sort.py``` from ```Alex Bewley’s SORT algorithm(simple online and realtime tracking)```.
 Link: https://github.com/abewley/sort
 I used a simple video for tracking but if we used a **complex video (When CCTV is closer and there is so much occlusion throughout the video)**, ```main.py``` might
 throw errors and it doesn't go through the entire frames of the video.
