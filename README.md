@@ -1,6 +1,8 @@
 # people_tracker
 
 For this demo project, I used ```yolov5m.onnx```, ```OpenCV```, and customized ```sort.py``` from ```Alex Bewley’s SORT algorithm(simple online and real-time tracking)```.
+
+
 Link: https://github.com/abewley/sort
 
 
@@ -11,7 +13,7 @@ You can also implement this ```repo``` having been modified ```main.py``` in oth
 in detail-
 
 
-![traffic](https://user-images.githubusercontent.com/89622996/157020209-41d55f1d-f115-4088-b145-add757b6d875.png)
+![traffic](https://github.com/chandra-ps612/pedestrain_tracker/blob/main/traffic.jpg?raw=true)
 
 
 ### An instruction from the official SORT algorithm Repo for implementing it in our own projects 
