@@ -5,8 +5,8 @@ For this demo project, I used ```yolov5m.onnx```, ```OpenCV```, and customized `
 
 Link: https://github.com/abewley/sort
 
-I used a simple video for tracking (partial implementation) but if you use a **complex video (When CCTV is closer and there is so much occlusion throughout the video)**, ```main.py``` might
-throw errors and it doesn't go through the entire frames of the video.
+I used a simple video for tracking (partial implementation) but if you use a **complex video (When CCTV is closer and there is so much occlusion throughout the video)**, customized 
+```sort.py``` might throw errors and entire frames of the video won't be processed.
 
 You can also implement this ```repo``` having been modified ```main.py``` in other projects i.e. ```Traffic_Surveillance```, etc. The screenshot provided below is produced by the same
 repo after some minor modification.
