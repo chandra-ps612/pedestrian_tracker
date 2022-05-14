@@ -54,8 +54,6 @@ except:
 # Loop over frames from the video file stream
 while True:
     _, frame=cap.read()
-    #frame=cv2.resize(frame, (640, 640), fx=None, fy=None)
-    print(frame.shape)
     height, width=frame.shape[:2]
     # Pre-Processing
     blob = cv2.dnn.blobFromImage(frame, 1 / 255.0, (640, 640), swapRB=True, crop=False)
