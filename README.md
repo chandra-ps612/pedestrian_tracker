@@ -8,11 +8,11 @@ Link: https://github.com/abewley/sort
 I used a simple video for tracking (partial implementation) but if you use a **complex video (When CCTV is closer and there is so much occlusion throughout the video)**, ```main.py``` might
 throw errors and it doesn't go through the entire frames of the video.
 
-You can also implement this ```repo``` having been modified ```main.py``` in other projects i.e. ```Traffic_Surveillance```, and many more. Provide a SS below
-in detail-
+You can also implement this ```repo``` having been modified ```main.py``` in other projects i.e. ```Traffic_Surveillance```, etc. The screenshot provided below is produced by the same
+repo after some minor modification.
 
 
-<img width="960" alt="traffic" src="https://user-images.githubusercontent.com/89622996/168426572-a177ce1c-be44-492b-af70-17c98a040b66.png">
+![traffic](https://user-images.githubusercontent.com/89622996/168426572-a177ce1c-be44-492b-af70-17c98a040b66.png)
 
 
 ### An instruction from the official SORT algorithm Repo for implementing it in our own projects 
