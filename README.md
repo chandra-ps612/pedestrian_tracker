@@ -13,7 +13,7 @@ You can also implement this ```repo``` having been modified ```main.py``` in oth
 in detail-
 
 
-![traffic](https://github.com/chandra-ps612/pedestrain_tracker/blob/main/traffic.jpg?raw=true)
+![traffic](https://github.com/chandra-ps612/pedestrain_tracker/blob/main/traffic.png?raw=true)
 
 
 ### An instruction from the official SORT algorithm Repo for implementing it in our own projects 
