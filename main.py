@@ -3,18 +3,18 @@ import imutils
 import time
 import cv2
 
-onnx_model_path= 'C:\\Users\\lav singh\\AppData\\Local\\Programs\\Python\\Python39\\exp_2\\yolov5.onnx_model\\yolov5m.onnx'
-dataset= 'C:\\Users\\lav singh\\AppData\\Local\\Programs\\Python\\Python39\\exp_2\\yolov5.onnx_model\\coco.names'
-videoPath= 'C:\\Users\\lav singh\\AppData\\Local\\Programs\\Python\\Python39\\exp_2\\yolov5.onnx_model\\video1.mp4'
-output_videoPath= 'C:\\Users\\lav singh\\AppData\\Local\\Programs\\Python\\Python39\\exp_2\\yolov5.onnx_model\\out.avi'
+onnx_model_path= 'C:\\Users\\lav singh\\OneDrive\\Desktop\\label_crossing_project\\yolov5x.onnx'
+dataset= 'C:\\Users\\lav singh\\OneDrive\\Desktop\\label_crossing_project\\coco.names'
+videoPath= 'C:\\Users\\lav singh\\OneDrive\\Desktop\\label_crossing_project\\label_crossing.MOV'
+output_videoPath= 'C:\\Users\\lav singh\\OneDrive\\Desktop\\label_crossing_project\\out1.avi'
 
 # Constants:
 CONF_THRESHOLD=0.45
-NMS_THRESHOLD=0.45
+NMS_THRESHOLD=0.4
 SCORE_THRESHOLD=0.5
 
 from sort import *
-unique_pep_tracker = Sort()
+pedestrain_tracker = Sort()
 memory = {}
 
 
@@ -97,7 +97,7 @@ while True:
 
     np.set_printoptions(formatter={'float': lambda x: "{0:0.3f}".format(x)})
     dets = np.asarray(dets)
-    tracks = unique_pep_tracker.update(dets)
+    tracks = pedestrain_tracker.update(dets)
 
     boxes = []
     index_IDs = []
@@ -136,9 +136,9 @@ while True:
 
         # Some information about processing single frame
         if total > 0:
-            elap = (end - start)
-            print(f'Single frame took {elap} seconds')
-            print(f'Estimated total time to finish:{elap*total} seconds')
+           elap = (end - start)
+           print(f'Single frame took {elap} seconds')
+           print(f'Estimated total time to finish:{elap*total} seconds')
 
     # Write the output frame to disk
     create.write(frame)
@@ -148,7 +148,7 @@ while True:
     # Increase frame index
     frameIndex += 1
 
-    if frameIndex >= 341:
+    if frameIndex >= 340:
         print('Cleaning up...')
         create.release()
         cap.release()
