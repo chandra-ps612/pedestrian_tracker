@@ -5,7 +5,7 @@ import cv2
 
 onnx_model_path= 'C:\\Users\\lav singh\\OneDrive\\Desktop\\label_crossing_project\\yolov5x.onnx'
 dataset= 'C:\\Users\\lav singh\\OneDrive\\Desktop\\label_crossing_project\\coco.names'
-videoPath= 'C:\\Users\\lav singh\\OneDrive\\Desktop\\label_crossing_project\\label_crossing.MOV'
+videoPath= 'C:\\Users\\lav singh\\OneDrive\\Desktop\\label_crossing_project\\video1.mp4'
 output_videoPath= 'C:\\Users\\lav singh\\OneDrive\\Desktop\\label_crossing_project\\out1.avi'
 
 # Constants:
@@ -54,7 +54,9 @@ except:
 # Loop over frames from the video file stream
 while True:
     _, frame=cap.read()
-    frame=cv2.resize(frame, (640, 640), fx=None, fy=None)
+    #frame=cv2.resize(frame, (640, 640), fx=None, fy=None)
+    print(frame.shape)
+    height, width=frame.shape[:2]
     # Pre-Processing
     blob = cv2.dnn.blobFromImage(frame, 1 / 255.0, (640, 640), swapRB=True, crop=False)
     net.setInput(blob)
@@ -75,10 +77,12 @@ while True:
                 if (classes_scores[class_id]>SCORE_THRESHOLD):
                     if (class_id==0):
                         # Object detected
-                        center_x=int(detection[0])
-                        center_y=int(detection[1])
-                        w=int(detection[2])
-                        h=int(detection[3])
+                        x_factor=width/640
+                        y_factor=height/640
+                        center_x=int(detection[0]*x_factor)
+                        center_y=int(detection[1]*y_factor)
+                        w=int(detection[2]*x_factor)
+                        h=int(detection[3]*y_factor)
                         # Rectangle co-ordinates
                         x=int(center_x-w/2)
                         y=int(center_y-h/2)
