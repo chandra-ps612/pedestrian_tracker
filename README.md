@@ -1,4 +1,4 @@
-# people_tracker
+# pedestrian_tracker
 
 For this demo project, I used ```yolov5m.onnx```, ```OpenCV```, and customized ```sort.py``` from ```Alex Bewley’s SORT algorithm(simple online and real-time tracking)```.
 
